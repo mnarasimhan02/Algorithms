@@ -1,3 +1,6 @@
+//Time O(n)
+//Space O(1)
+//Implement algorithm to identify if a string has all unique characters
 
 public class isUnique {
     public static void main(String[] args) {
