@@ -30,7 +30,6 @@ public class editDistance {
 			}
 		}
 		if (index1<m || index2<n) count++;		
-			
 		return count==1;
 	}
 	public static void main(String[] args) {
