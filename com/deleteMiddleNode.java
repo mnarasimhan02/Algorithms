@@ -1,6 +1,7 @@
 package com;
 //Time complexity: O(1)
 //Space O(1)
+//Copy values from next element and delete next element
 import com.kthtoLast.node;
 
 public class deleteMiddleNode {
@@ -43,7 +44,7 @@ static node deleteMiddleNode(node n) {
         System.out.println("Linked list before deleting middle node :");
         printList(start);
 		node delMiddlenode = deleteMiddleNode(start.next.next);
-        System.out.println("Linked list after deleting middle node :");
+        System.out.println("\nLinked list after deleting middle node :");
         printList(start);
 	}
 }
