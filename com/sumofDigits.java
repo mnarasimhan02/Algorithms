@@ -3,7 +3,6 @@ package com;
 //One by one pick nodes of both lists and add the values. If sum is more than 10 then make carry as 1 and reduce sum.
 // If one list has more elements than the other then consider remaining values of this list as 0
 
-import com.partitionList.node;
 
 public class sumofDigits {
 

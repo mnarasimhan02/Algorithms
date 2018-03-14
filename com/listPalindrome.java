@@ -3,8 +3,8 @@ package com;
 import java.util.Stack;
 //Time complexity: O(n)
 //Space O(n)
-//Reverse and compare or iterative approach. 
-//First half of the normal list matches with second half of the reversed list.
+//Two approaches - Reverse and compare or iterative approach. 
+//Iterative -  First half of the normal list matches with second half of the reversed list.
 /*fast_ptr would become NULL when there are even elements in the list and not NULL for odd elements. We need to skip  
 the middle node for odd case*/
 public class listPalindrome {
