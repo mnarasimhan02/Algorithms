@@ -14,21 +14,23 @@ class listIntersection {
 	static node head1;
 	static node head2;
 
-	static class node
-	{
+	static class node {
 		int data;
 		node next;
-		public node(int data) 
-		{
-			this.data=data;
-			this.next=null;
+
+		public node(int data) {
+			this.data = data;
+			this.next = null;
 		}
+
 		public node() {
 		}
 
 	}
-	/*function to get the intersection point of two linked
-    lists head1 and head2 */
+
+	/*
+	 * function to get the intersection point of two linked lists head1 and head2
+	 */
 	int getNode() {
 		int c1 = getCount(head1);
 		int c2 = getCount(head2);
@@ -36,17 +38,18 @@ class listIntersection {
 
 		if (c1 > c2) {
 			d = c1 - c2;
-			return _getIntesectionNode(d, head1, head2);
+			return getIntesectionNode(d, head1, head2);
 		} else {
 			d = c2 - c1;
-			return _getIntesectionNode(d, head2, head1);
+			return getIntesectionNode(d, head2, head1);
 		}
 	}
 
-	/* function to get the intersection point of two linked
-     lists head1 and head2 where head1 has d more nodes than
-     head2 */
-	int _getIntesectionNode(int d, node node1, node node2) {
+	/*
+	 * function to get the intersection point of two linked lists head1 and head2
+	 * where head1 has d more nodes than head2
+	 */
+	int getIntesectionNode(int d, node node1, node node2) {
 		int i;
 		node current1 = node1;
 		node current2 = node2;
@@ -67,8 +70,10 @@ class listIntersection {
 		return -1;
 	}
 
-	/*Takes head pointer of the linked list and
-    returns the count of nodes in the list */
+	/*
+	 * Takes head pointer of the linked list and returns the count of nodes in the
+	 * list
+	 */
 	int getCount(node node) {
 		node current = node;
 		int count = 0;
@@ -91,7 +96,7 @@ class listIntersection {
 		listIntersection.head1.next.next.next = new node(15);
 		listIntersection.head1.next.next.next.next = new node(30);
 
-		//   creating second linked list     
+		// creating second linked list
 		listIntersection.head2 = new node(10);
 		listIntersection.head2.next = new node(15);
 		listIntersection.head2.next.next = new node(30);

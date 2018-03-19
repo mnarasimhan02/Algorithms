@@ -1,6 +1,7 @@
 package com;
 
 import java.util.Stack;
+
 //Time complexity: O(n)
 //Space O(n)
 //Two approaches - Reverse and compare or iterative approach. 
@@ -9,50 +10,52 @@ import java.util.Stack;
 the middle node for odd case*/
 public class listPalindrome {
 
-	static class node
-	{
+	static class node {
 		int data;
 		node next;
-		public node(int data) 
-		{
-			this.data=data;
-			this.next=null;
+
+		public node(int data) {
+			this.data = data;
+			this.next = null;
 		}
 
-		public node() { }
+		public node() {
+		}
 	}
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 
 		node start = new node(6);
 		start.next = new node(1);
 		start.next.next = new node(6);
 		boolean result = isPalindrome(start);
-		System.out.println("\n Palindrome Result "+result);
+		System.out.println("\n Palindrome Result " + result);
 
 	}
 
 	private static boolean isPalindrome(node start) {
 
-		node l1=start, l2=start;
-		Stack <Integer> stack= new Stack<Integer>();
-		/*Push elements from first half of linked list into stack when fast runner reaches end of the list, we know we are in the middle*/
-		while (l2!=null && l2.next!=null) {
+		node l1 = start, l2 = start;
+		Stack<Integer> stack = new Stack<Integer>();
+		/*
+		 * Push elements from first half of linked list into stack when fast runner
+		 * reaches end of the list, we know we are in the middle
+		 */
+		while (l2 != null && l2.next != null) {
 			stack.push(l1.data);
-			l1=l1.next;
-			l2=l2.next.next;
+			l1 = l1.next;
+			l2 = l2.next.next;
 		}
-		/*odd numbers, skip middle element*/
-		if (l2!=null) {
-			l1=l1.next;
+		/* odd numbers, skip middle element */
+		if (l2 != null) {
+			l1 = l1.next;
 		}
-		while(l1!=null) {
-			int top= stack.pop().intValue();
-			if (top!=l1.data){
+		while (l1 != null) {
+			int top = stack.pop().intValue();
+			if (top != l1.data) {
 				return false;
 			}
-			l1=l1.next;
+			l1 = l1.next;
 		}
 		return true;
 	}

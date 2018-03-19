@@ -1,4 +1,5 @@
 package com;
+
 //Time complexity: O(1)
 //Space O(1)
 //Copy values from next element and delete next element
