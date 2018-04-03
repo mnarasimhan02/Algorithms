@@ -1,10 +1,3 @@
-/*
-Worst case O(NlogN)
-CHOOSE AN ELEMENT IN AT THE MID-POINT OF A SORTED LIST
-CHECK WHETHER IT’S SMALLER THAN OR GREATER THAN THE ELEMENT YOU ARE LOOKING FOR
-IF THE ELEMENT AT THE MID- POINT IS LARGER THAN THE ELEMENT YOU ARE SEARCHING FOR
-Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) whereas merge sort requires O(N) extra storage,
-*/
 public class BinarySearch {
 
     public static int[] sortedArray = new int[] {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30};

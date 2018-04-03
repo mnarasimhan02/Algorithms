@@ -1,7 +1,8 @@
-public class BinaryTreeBreadthFirstTraversal {
 
-    public static void main(String[] args) throws
-            Queue.QueueUnderflowException, Queue.QueueOverflowException {
+
+public class BinaryTreeInOrderTraversal {
+
+    public static void main(String[] args) {
         Node<Character> a = new Node<>('A');
         Node<Character> b = new Node<>('B');
         Node<Character> c = new Node<>('C');
@@ -21,32 +22,21 @@ public class BinaryTreeBreadthFirstTraversal {
         e.setRightChild(g);
         b.setLeftChild(x);
 
-        breadthFirst(a);
+        inOrder(a);
     }
 
     public static void print(Node node) {
         System.out.print(node.getData() + "->");
     }
 
-    public static void breadthFirst(Node root) throws
-            Queue.QueueUnderflowException, Queue.QueueOverflowException {
+    public static void inOrder(Node root) {
         if (root == null) {
             return;
         }
 
-        Queue<Node> queue = new Queue<>(Node.class);
-        queue.enqueue(root);
-        while (!queue.isEmpty()) {
-            Node node = queue.dequeue();
-            print(node);
-
-            if (node.getLeftChild() != null) {
-                queue.enqueue(node.getLeftChild());
-            }
-            if (node.getRightChild() != null) {
-                queue.enqueue(node.getRightChild());
-            }
-        }
+        inOrder(root.getLeftChild());
+        print(root);
+        inOrder(root.getRightChild());
     }
 
     public static class Node<T> {
